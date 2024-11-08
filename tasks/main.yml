@@ -5,10 +5,10 @@
   include_vars: "{{ ansible_os_family }}.yml"
 
 - name: "Include install-{{ ansible_os_family }}.yml"
-  include: "install-{{ ansible_os_family }}.yml"
+  include_tasks: "install-{{ ansible_os_family }}.yml"
 
 - name: "Include configure-{{ ansible_os_family }}.yml"
-  include: "configure-{{ ansible_os_family }}.yml"
+  include_tasks: "configure-{{ ansible_os_family }}.yml"
 
 - name: Create plug-ins config
   template:
